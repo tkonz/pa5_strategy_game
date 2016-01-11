@@ -26,7 +26,7 @@ namespace Gaming {
         double getEnergy() const { return __energy; }
         void addEnergy(double e) { __energy += e; }
         
-        void age() override final;
+        void age() override final {__energy -= AGENT_FATIGUE_RATE;}
         
         bool isViable() const override final { return !isFinished() && __energy > 0.0; }
         

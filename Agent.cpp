@@ -26,11 +26,6 @@ namespace Gaming
         std::cout << "Destroying Derived class Agent\n";
     }
     
-    void Agent::age()
-    {
-        this->__energy -= AGENT_FATIGUE_RATE;
-    }
-    
     Piece& Agent::operator*(Piece &other)
     {
         return other.interact(this);
@@ -79,5 +74,7 @@ namespace Gaming
         }
         return *this;
     }
+    
+    
     
 }

@@ -1122,42 +1122,42 @@ void test_game_print(ErrorContext &ec, unsigned int numRuns) {
 }
 
 // Playing and termination of a game
-//void test_game_play(ErrorContext &ec, unsigned int numRuns) {
-//    bool pass;
-//
-//    // Run at least once!!
-//    assert(numRuns > 0);
-//
-//    ec.DESC("--- Test - Game - Play ---");
-//
-//    for (int run = 0; run < numRuns; run++) {
-//
-//        ec.DESC("3x3 grid, manual, game w/o resources terminates immediately");
-//
-//        {
-//            Game g; // manual = true, by default
-//
-//            g.play(); // verbose = false, by default
-//
-//            pass = (g.getNumResources() == 0);
-//
-//            ec.result(pass);
-//        }
-//
-//        ec.DESC("3x3 grid, manual, 1 simple, 1 resource");
-//
-//        {
-//            Game g; // manual = true, by default
-//            g.addSimple(1, 1);
-//            g.addFood(2, 2);
-//
-//            g.play(false); // verbose = false, by default
-//
-//            pass = (g.getNumResources() == 0) &&
-//            (g.getNumAgents() == 1);
-//
-//            ec.result(pass);
-//        }
+void test_game_play(ErrorContext &ec, unsigned int numRuns) {
+    bool pass;
+
+    // Run at least once!!
+    assert(numRuns > 0);
+
+    ec.DESC("--- Test - Game - Play ---");
+
+    for (int run = 0; run < numRuns; run++) {
+
+        ec.DESC("3x3 grid, manual, game w/o resources terminates immediately");
+
+        {
+            Game g; // manual = true, by default
+
+            g.play(); // verbose = false, by default
+
+            pass = (g.getNumResources() == 0);
+
+            ec.result(pass);
+        }
+
+        ec.DESC("3x3 grid, manual, 1 simple, 1 resource");
+
+        {
+            Game g; // manual = true, by default
+            g.addSimple(1, 1);
+            g.addFood(2, 2);
+
+            g.play(false); // verbose = false, by default
+
+            pass = (g.getNumResources() == 0) &&
+            (g.getNumAgents() == 1);
+
+            ec.result(pass);
+        }
 //
 //        ec.DESC("3x3 grid, manual, 1 simple, 2 resources");
 //
@@ -1331,5 +1331,5 @@ void test_game_print(ErrorContext &ec, unsigned int numRuns) {
 //            
 //            ec.result(pass);
 //        }
-//    }
-//}
+    }
+}

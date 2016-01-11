@@ -163,7 +163,9 @@ namespace Gaming
             if (resource2)
                 num2++;
         }
+        
         std::cout << (num + num2) << std::endl;
+        
         return num + num2;
     }
     
@@ -854,5 +856,21 @@ namespace Gaming
             os << "Status: " << std::endl;
         }
         return os;
+    }
+    void Game::round()
+    {
+        //Go through all the Piece-s that are still viable and on the grid (this doesn't change between round) and:
+//        If a Piece has not taken a turn, give it a turn. Use Piece::getTurned().
+//        Call the Piece::setTurned(true) to avoid giving a moving Piece more than one turn per round.
+//        Perform the turn and implement all the consequences of the turn (e.g. interaction with another Piece).
+//        Delete any Piece-s which interacted and, as a result, became unviable.
+//        Go through all the Piece-s that are still viable and on the grid after the current round, and:
+//        Call the polymorphic Piece::age().
+//        Call the Piece::setTurned(false) to reset the turn for the next round.
+//            Delete any Piece-s which have aged to zero.
+    }
+    void Game::play(bool verbose)
+    {
+        
     }
 }
